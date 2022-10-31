@@ -1,0 +1,59 @@
+<section [ngClass]="acc?'style2':''">
+  
+  <input type="checkbox" id="check">
+  <input type="checkbox" id="check1">
+<nav class="">
+    <div>
+      <h1>BANK OF FRAMES</h1>
+    </div>
+    <div class="link1 ">
+      <ul>
+        <li><a href="">New Registration</a></li>
+        <li><a href=""><label for="check">Transaction</label></a></li>
+        <li><a   ><label routerLink="/transaction">Balance</label></a></li>
+        <li><a href="/credit"><label>Credit</label></a></li>
+        <li><button class="rounded p-1 " (click)="deleteAccount()">Delete</button></li> 
+        <li><button class="rounded p-1"  (click)="logout()" appHighlight>Log out</button></li>
+        <!--<li><button type="submit" class="rounded p-1"><label for=""><i class="bi bi-gear"></i></label></button></li> -->
+      </ul>
+    </div>
+  </nav>
+  <div>
+  <span><h4>Welcome User</h4></span>
+   <span></span>
+</div>
+  <app-delete [item]="acc" (oncancel)="cancelacc()" (ondelete)="deleteacc($event)"></app-delete>
+
+      <div  class=" w-25 main p-5  rounded">
+
+      <form [formGroup]="homepageForm">
+
+      <div>
+        <input class="mb-3 rounded w-120"  formControlName="dccounno" type="text" placeholder="enter account number">
+      </div>
+
+      <div *ngIf="(this.homepageForm.get('dccounno')?.errors)&&(this.homepageForm.get('dccounno')?.dirty)">Incorrect AccountNo</div>
+
+      <div>
+        <input class="mb-3 rounded w-120"   formControlName="damount"  type="text" placeholder="enter amount">
+      </div>
+
+      <div *ngIf="(this.homepageForm.get('damount')?.errors)&&(this.homepageForm.get('damount')?.dirty)">Invalid amount</div>
+
+      <div>
+        <input class="mb-3 rounded w-120"  formControlName="dpassword" type="text" placeholder="enter password">
+      </div>
+
+
+      <div *ngIf="(this.homepageForm.get('dpassword')?.errors)&&(this.homepageForm.get('dpassword')?.dirty)">Invalid password</div>
+
+      <div class=" text-center" >
+        <button class="rounded bg-primary p-1 ps-2 pe-2 w-25 me-5  " (click)="Deposit()"   >Deposit</button>
+        <button class="rounded bg-primary p-1 ps-2 pe-2 w-25  " (click)="Withdraw()"   >withdraw</button>
+      </div>
+
+      
+    </form>
+    
+    </div>
+</section>

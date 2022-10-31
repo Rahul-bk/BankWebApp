@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    margin: 0;
+}
+#hero
+{
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.667)), url("./../src/assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* border-left-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(240, 229, 229); */
+    background-image: url(./assets/john-schnobrich-2FPjlAyMQTA-unsplash.jpg);
+    border-radius: 20px;
+}
+.main
+{
+    background: #fff;
+    min-height: 50vh;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255,0.3), rgba(255,255,255,0.3));
+    border-radius: 2.5rem;
+    /* border-left-color: yellow; */
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    min-width: 35%;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    text-align: center;
+    box-shadow: 3px 2px  18px rgba(247, 246, 244, 0.493);
+    /* border-radius: 20px; */
+}
+.main input
+{
+    width: 300px;
+    line-height:35px;
+    border-radius:11px;
+    outline: none;
+    border: none;
+}
+.btn2 button
+{
+    width: 80px;
+    height:35px;
+    border: rgb(169, 209, 196);
+    outline: none;
+    border-radius: 4px;
+        margin-left: 210px;
+    /* border-bottom-left-radius: 100px;
+    border-top-right-radius: 90px; */
+}
+.btn2 button:hover
+{
+    background-color: rgba(255, 69, 199, 0.445);
+    transition:.6s;
+    color: rgb(194, 73, 73);
+}
+.imgs img
+{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+}
+.imgs
+{
+    text-align: center;
+}
+.link a{
+position: relative;
+right: 125px;
+text-decoration: none;
+/* height: 150px; */
+border: 2px;
+/* margin-right: 110px; */
+}

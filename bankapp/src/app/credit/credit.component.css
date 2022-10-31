@@ -1,0 +1,97 @@
+section
+{
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url(./../../assets/jinyun-xBuu23uxarU-unsplash.jpg);
+  background-size: cover;
+}
+
+nav
+{
+  height: 10vh;
+  background-color: rgba(253, 253, 253, 0.329);
+  
+}
+label{
+  color: blue;
+}
+li{
+  color: blue;
+}
+
+#check3
+{
+  display: none;
+}
+.link1 ul li
+{
+  list-style: none;
+  display: inline-block;
+  margin: 0px 10px;
+  position: relative;
+  bottom: 40px;
+}
+.link1 ul li a
+{
+  text-decoration: none;
+
+}
+
+.link1{
+  
+  flex: 1;
+  text-align: center;
+}
+.main
+{
+  position: relative;
+  top: 70px;
+  transition: 1s;
+  left: 400px;
+  
+}
+#check
+{
+  display: none;
+}
+#check1
+{
+  display: none;
+
+}
+#check:checked~ .main
+{
+  transform: translateY(-500px);
+  transition: 1s;
+}
+.main input
+{
+  border: 1px solid black;
+}
+
+.balance{
+  background-color: #000;
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 100px;
+  left: 5%;
+  transition: 1s;
+}
+#check1:checked~ .balance
+{
+  display: block;
+}
+table,th,td{
+  border: 3px solid crimson;
+}
+.cred{
+  background-color: rgba(0, 255, 255, 0.651);
+  height: 400px;
+  text-justify: auto;
+  border-radius: 18px;
+  border-left: tomato;
+}

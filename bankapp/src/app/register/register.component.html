@@ -1,0 +1,48 @@
+<section id="hero">
+    <div class="main p-5">
+        <div class="imgs">
+            <img src=".././../assets/carlos-muza-hpjSkU2UYSU-unsplash.jpg" alt="">
+        </div>
+        <div class="right">
+            <form [formGroup]="registerForm">
+                <div>
+                <input type="text" formControlName="uname" class="m-4 ps-2" placeholder="username">
+                
+                </div>
+
+                <div *ngIf="(this.registerForm.get('uname')?.errors)&&(this.registerForm.get('uname')?.dirty)">Incorrect Form</div>
+
+                <div>
+                    <input type="text" formControlName="accountnum" class="m-4 ps-2" placeholder="accno">
+                </div>
+
+                <div *ngIf="(this.registerForm.get('accountnum')?.errors)&&(this.registerForm.get('accountnum')?.dirty)">Incorrect Form</div>
+
+                <div>
+                    <input type="text" formControlName="pass" class="m-4 ps-2" placeholder="Password">
+                </div>
+
+                <div *ngIf="(this.registerForm.get('pass')?.errors)&&(this.registerForm.get('pass')?.dirty)">Incorrect Form</div>
+
+
+                <div>
+                    <input type="text" formControlName="balance" class="m-4 ps-2" placeholder="balance">
+                </div>
+
+                <div *ngIf="(this.registerForm.get('balance')?.errors)&&(this.registerForm.get('balance')?.dirty)">Incorrect Form</div>
+
+
+
+                <div class="btn2">
+                    <button (click)="Register()">Register</button>
+                </div>
+                
+                <div>
+                <span style="margin-right: 130px;" >Already account?</span>
+                <span class="link"><a href="/login">Login</a></span>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

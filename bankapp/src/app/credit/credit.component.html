@@ -1,0 +1,51 @@
+<!-- <p>credit works!</p> -->
+
+<div class=" w-25 main p-5  rounded">
+<div class="cred">
+  <form [formGroup]="creditcard">
+
+    <div>
+        <input class="mb-3 rounded w-120"   formControlName="accountno"  type="text" placeholder="accountno">
+    </div>
+    <div>
+      <input class="mb-3 rounded w-120"  formControlName="name" type="text" placeholder="name">
+    </div>
+    <div>
+        <input class="mb-3 rounded w-120"  formControlName="salary" type="text" placeholder="salary">
+    </div>
+    <div>
+      <input class="mb-3 rounded w-120"  formControlName="aadharcard" type="text" placeholder="aadharcard">
+    </div>
+    <div>
+        <input class="mb-3 rounded w-120"  formControlName="pancard" type="text" placeholder="pancard">
+    </div>
+    <div>
+        <input class="mb-3 rounded w-120"  formControlName="password" type="text" placeholder="password">
+    </div>
+
+    </form>
+  
+    <div class=" text-center">
+<button class="rounded bg-primary p-1 ps-2 pe-2 w-25 me-5  " (click)="Credit()">submit</button>
+
+<div class="bg">
+    <table class="table table-light">
+        <thead>
+        <tr>  
+            <th>Account Number</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Aadhar Number</th>
+        </tr> 
+        </thead> 
+        <tbody>
+            <tr *ngFor="let data of creditArray">
+            <td>{{data.accountNo}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.ssalary}}</td>
+            <td>{{data.aadharCard}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
